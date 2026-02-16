@@ -30,14 +30,14 @@ app.get("/users", (req, res) => {
   res.send(users);
 });
 
-// GET /users/:id
-app.get("/users/:id", (req, res) => {
-  const user = users.find(u => u.id == req.params.id);
+// // GET /users/:id
+// app.get("/users/:id", (req, res) => {
+//   const user = users.find(u => u.id == req.params.id);
 
-  if (!user) return res.status(404).send("User not found");
+//   if (!user) return res.status(404).send("User not found");
 
-  res.send(user);
-});
+//   res.send(user);
+// });
 
 // ================= UPDATE =================
 
@@ -45,7 +45,7 @@ app.get("/users/:id", (req, res) => {
 app.put("/users/:id", (req, res) => {
   const user = users.find(u => u.id == req.params.id);
 
-  if (!user) return res.status(404).send("User not found");
+  if (!user) return res.status(404).send("Userrr not found");
 
   user.name = req.body.name;
   user.age = req.body.age;
